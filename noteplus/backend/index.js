@@ -5,8 +5,9 @@ const app = express();
 //Connecting to database
 connectDB();
 
-app.get("/", (req, res) => {
-    res.status(200).send("Hey there!")
-})
 
-app.listen(4000)
+//available routes
+app.use("/api/auth", require('./routes/auth'))
+app.use("/api/notes", require('./routes/notes'))
+
+app.listen(4000, () => console.log(`app listening to port 4000`))

@@ -22,4 +22,6 @@ const UserSchema = new Schema({
     }
 })
 
-module.exports = mongoose.model("user", UserSchema)
+const User = mongoose.model("user", UserSchema)
+    //User.createIndexes(); Prevents duplicate entry of unique type data into the database but we will write it's own logic
+module.exports = User

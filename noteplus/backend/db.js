@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const mongoURI = "mongodb://localhost:27017";
+const mongoURI = "mongodb://localhost:27017/noteplus";
 
 const connectDB = async() => {
     const connection = await mongoose.connect(mongoURI, () => {

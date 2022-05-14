@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const mongoURI = "mongodb+srv://adminkabaap:getup-backdrop0-catalog@ecommerce.kimdb.mongodb.net/test";
+const mongoURI = "mongodb://localhost:27017";
 
 const connectDB = async() => {
     const connection = await mongoose.connect(mongoURI, () => {

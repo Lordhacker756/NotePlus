@@ -2,9 +2,13 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
 const { body, validationResult } = require('express-validator');
+const jwt = require("jsonwebtoken");
+const bcrypt = require('bcryptjs');
 
 //Now we will use router.get insted of app.get
 
+//Let's create a secret to sign our JWT
+const JWT_SECRET = "$2a$10$yU.xIiS0dMjb2fu7ePAE8uwwRs1NSK4FaQzUMRjSRrpTGgV3Srh7O"
 
 //Create a User using: POST "/api/auth", Doesn't require authentication(logged in)
 router.post('/register', [ //Performing basic checks before proceeding using expValidaor
@@ -26,14 +30,26 @@ router.post('/register', [ //Performing basic checks before proceeding using exp
         }
 
         //  Now if the user is unique we create the user!    
+
+        //But first let's secure the password with some 🧂😜
+        const namkeenPassword = await bcrypt.hash(req.body.password, 10) //It returns a promise so we need to wait for our namkeen wala password
+
         user = await User.create({ //This method returns a promise
             name: req.body.name,
             email: req.body.email,
-            password: req.body.password
+            password: namkeenPassword
         })
 
+        const data = {
+                user: {
+                    id: user.id
+                }
+            }
+            //Let's sign✒️ our JWT
+        const authToken = jwt.sign(data, JWT_SECRET)
         res.json({ //If successful
-            msg: "User Registered Successfully" //we return a json message
+            msg: "User Registered Successfully",
+            authToken: authToken //we return a json message
         })
 
     }

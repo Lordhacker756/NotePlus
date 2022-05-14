@@ -1,4 +1,4 @@
-****# A Full MERN Stack Notetaking App💜
+# A Full MERN Stack Notetaking App💜
 
 Deploy your idea to the cloud or use it as a daily password protected journal possibilites are endless!
 So that you are never out of place to store your ideas!

@@ -15,7 +15,6 @@ const fetchuser = async(req, res, next) => {
     //If token is found, we need to verify the token
     try {
         const data = jwt.verify(token, JWT_SECRET)
-        console.log(data)
         req.user = data.user; //🔶We are adding userId to the request!🔶
         next() //This will pass the control to the next middleware i.e the main req, res function in our case, or we can also chain multiple middlewares!
     }

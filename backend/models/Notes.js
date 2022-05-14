@@ -1,8 +1,13 @@
 //Notice just like react components, naming of mongoose models also begin with caps
 
 const mongoose = require('mongoose')
+const { Schema } = mongoose; //To use schema we need to import it
 
-const NotesSchema = new Schema({
+const notesSchema = new Schema({
+    user: {
+        type: mongoose.Schema.Types.ObjectId, //🔶We are linking the ObjectID from the user collection with notes collection🔶
+        ref: "user"
+    },
     title: {
         type: String,
         required: true,
@@ -21,4 +26,5 @@ const NotesSchema = new Schema({
     }
 })
 
-module.exports = mongoose.model("notes", NotesSchema)
+const Notes = mongoose.model("Notes", notesSchema)
+module.exports = Notes

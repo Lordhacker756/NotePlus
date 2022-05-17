@@ -38,8 +38,8 @@ const Home = () => {
           </svg>
         </div>
         <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-          <h2 class="font-medium title-font text-white mb-1 text-xl">Shooting Stars</h2>
-          <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+          <h2 class="font-medium title-font text-white mb-1 text-xl">Fully Encrypted</h2>
+          <p class="leading-relaxed">Your notes are encrypted using complex algorithm, so your notes are completely private🔒</p>
         </div>
       </div>
     </div>
@@ -55,8 +55,8 @@ const Home = () => {
           </svg>
         </div>
         <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-          <h2 class="font-medium title-font text-white mb-1 text-xl">The Catalyzer</h2>
-          <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+          <h2 class="font-medium title-font text-white mb-1 text-xl">24x7 Uptime</h2>
+          <p class="leading-relaxed">Our server is up with 99% uptime so you never have to wait for your precious notes</p>
         </div>
       </div>
     </div>
@@ -73,8 +73,8 @@ const Home = () => {
           </svg>
         </div>
         <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-          <h2 class="font-medium title-font text-white mb-1 text-xl">The 400 Blows</h2>
-          <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+          <h2 class="font-medium title-font text-white mb-1 text-xl">Robust App</h2>
+          <p class="leading-relaxed">The app is built using the most robust archetecture so you don't have to go through unnecessary bugs🪲</p>
         </div>
       </div>
     </div>
@@ -91,8 +91,8 @@ const Home = () => {
           </svg>
         </div>
         <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-          <h2 class="font-medium title-font text-white mb-1 text-xl">Neptune</h2>
-          <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+          <h2 class="font-medium title-font text-white mb-1 text-xl">A Safe For Everyone</h2>
+          <p class="leading-relaxed">An account for everyone so that everyone has a space for their ideas on the cloud⛅</p>
         </div>
       </div>
     </div>

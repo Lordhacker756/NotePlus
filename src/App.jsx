@@ -1,10 +1,11 @@
 import Login from "./components/Login";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import About from "./components/About"
 import Home from "./components/Home"
 import Contact from "./components/Contact"
 import Notes from "./components/Notes"
 import Register from "./components/Register";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="contact" element={<Contact />} />
         <Route path="register" element={<Register />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

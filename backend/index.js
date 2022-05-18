@@ -5,6 +5,16 @@ const app = express();
 //Connecting to database
 connectDB();
 
+const { createProxyMiddleware } = require('http-proxy-middleware');
+module.exports = (app) => {
+    app.use(
+        ['/api*'],
+        createProxyMiddleware({
+            target: 'http://localhost:4000',
+        })
+    );
+};
+
 //To enable the application to use JSON, we use a middleware
 app.use(express.json())
 

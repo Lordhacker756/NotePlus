@@ -13,4 +13,7 @@ app.use(express.json())
 app.use("/api/auth", require('./routes/auth'))
 app.use("/api/notes", require('./routes/notes'))
 
-app.listen(4000, () => console.log(`app listening to port 4000`))
+//Creating a dynamic port
+const PORT = process.env.PORT || 4000
+
+app.listen(PORT, () => console.log(`app listening to port ${PORT}`))
